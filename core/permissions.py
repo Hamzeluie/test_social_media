@@ -11,9 +11,6 @@ class UpdateOwnPosts(BasePermission):
 
 class UpdateOwnComments(BasePermission):
     def has_object_permission(self, request, view, obj):
-        # print(request.user.id)
-        # print(obj.post.author.id)
-        # print('==============================>>>>>>>>>>>>>>>>>>>>????????????????')
         if request.method in permissions.SAFE_METHODS:
             return True
         return obj.post.author.id == request.user.id

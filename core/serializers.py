@@ -13,10 +13,6 @@ class PostModelSerializer(ModelSerializer):
             'summary',
             'created_at',
         )
-        # def create(self, validated_data):
-        #     """create and return new post"""
-        #     post = Post.objects.create_post()
-
 
 class CommentModelSerializer(ModelSerializer):
     class Meta:
